@@ -2,7 +2,7 @@
 
 Curso de "Razonamiento automático"
 
-* Temas
+** Temas
 + [[https://github.com/jaalonso/RA20116/blob/master/temas/T1_Programacion_funcional_en_Isabelle.thy][Tema 1]]: Programación funcional en Isabelle.
 
-* Ejercicios
+** Ejercicios
