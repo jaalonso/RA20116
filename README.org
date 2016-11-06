@@ -1,10 +1,12 @@
 #+TITLE: RA20116
 
-Curso de "Razonamiento automático" (2016-17)
+Curso de [[http://www.glc.us.es/~jalonso/RA2016/index.php5/Razonamiento_autom%C3%A1tico_(2016-17)][Razonamiento automático" (2016-17)]]
 
 ** Temas
 + [[https://github.com/jaalonso/RA20116/blob/master/temas/T1_Programacion_funcional_en_Isabelle.md][Tema 1]]: Programación funcional en Isabelle.
 + [[https://github.com/jaalonso/RA20116/blob/master/temas/T2_Razonamiento_automatico_sobre_programas_en_IsabelleHOL.md][Tema 2]]: Razonamiento automático sobre programas en Isabelle/HOL.
++ Tema 3: Razonamiento estructurado sobre programas en Isabelle/HOL.
++ Tema 4: Razonamiento por casos y por inducción. 
 
 ** Ejercicios
 + *Relación 1*: Programación funcional en Isabelle. ([[https://github.com/jaalonso/RA20116/blob/master/ejercicios/R1_Programacion_funcional_en_Isabelle.md][Enunciado]] y [[https://github.com/jaalonso/RA20116/blob/master/ejercicios/R1_Programacion_funcional_en_Isabelle_sol.md][solución]]).
