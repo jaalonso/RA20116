@@ -1,4 +1,4 @@
-```{.isa}
+```{.isabelle}
 chapter {* Tema 1: Programación funcional en Isabelle *}
 
 theory T1_Programacion_funcional_en_Isabelle
