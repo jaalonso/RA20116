@@ -8,4 +8,4 @@ Curso de "Razonamiento automático" (2016-17)
 
 ** Ejercicios
 + *Relación 1*: Programación funcional en Isabelle. ([[https://github.com/jaalonso/RA20116/blob/master/ejercicios/R1_Programacion_funcional_en_Isabelle.md][Enunciado]] y [[https://github.com/jaalonso/RA20116/blob/master/ejercicios/R1_Programacion_funcional_en_Isabelle_sol.md][solución]]).
-+ *Relación 2*: Razonamiento automático sobre programas en Isabelle/HOL.
++ *Relación 2*: Razonamiento automático sobre programas en Isabelle/HOL. ([[https://github.com/jaalonso/RA20116/blob/master/ejercicios/R2_Razonamiento_automatico_sobre_programas.md][Enunciado]]).
