@@ -1,6 +1,8 @@
+```{.isabelle}
 chapter {* R1: Programación funcional en Isabelle *}
 
-theory R1_Programacion_funcional_en_Isabelle
+theory R1_Programacion_funcional_en_Isabelle_sol
+
 imports Main 
 begin
 
@@ -12,7 +14,8 @@ text {* ----------------------------------------------------------------
   ------------------------------------------------------------------- *}
 
 fun longitud :: "'a list \<Rightarrow> nat" where
-  "longitud xs = undefined"
+  "longitud []     = 0"
+| "longitud (x#xs) = 1 + longitud xs"
    
 value "longitud [4,2,5]" -- "= 3"
 
@@ -25,11 +28,11 @@ text {* ---------------------------------------------------------------
   ------------------------------------------------------------------ *}
 
 fun intercambia :: "'a \<times> 'b \<Rightarrow> 'b \<times> 'a" where
-  "intercambia (x,y) = undefined"
+  "intercambia (x,y) = (y,x)"
 
 value "intercambia (u,v)" -- "= (v,u)"
 
-text {* ---------------------------------------------------------------
+text {* --------------------------------------------------------------- 
   Ejercicio 3. Definir, por recursión, la función
      inversa :: 'a list \<Rightarrow> 'a list
   tal que (inversa xs) es la lista obtenida invirtiendo el orden de los
@@ -38,7 +41,8 @@ text {* ---------------------------------------------------------------
   ------------------------------------------------------------------ *}
 
 fun inversa :: "'a list \<Rightarrow> 'a list" where
-  "inversa xs = undefined"
+  "inversa []     = []"
+| "inversa (x#xs) = inversa xs @ [x]"
 
 value "inversa [a,d,c]" -- "= [c,d,a]"
 
@@ -51,7 +55,8 @@ text {* ---------------------------------------------------------------
   ------------------------------------------------------------------ *}
 
 fun repite :: "nat \<Rightarrow> 'a \<Rightarrow> 'a list" where
-  "repite n x = undefined"
+  "repite 0 x       = []"
+| "repite (Suc n) x = x # (repite n x)"
 
 value "repite 3 a" -- "= [a,a,a]"
 
@@ -64,7 +69,8 @@ text {* ---------------------------------------------------------------
   ------------------------------------------------------------------ *}
 
 fun conc :: "'a list \<Rightarrow> 'a list \<Rightarrow> 'a list" where
-  "conc xs ys = undefined"
+  "conc []     ys = ys"
+| "conc (x#xs) ys = x # (conc xs ys)"
 
 value "conc [a,d] [b,d,a,c]" -- "= [a,d,b,d,a,c]"
 
@@ -77,7 +83,9 @@ text {* ---------------------------------------------------------------
   ------------------------------------------------------------------ *}
 
 fun coge :: "nat \<Rightarrow> 'a list \<Rightarrow> 'a list" where
-  "coge n xs = undefined"
+  "coge n []           = []"
+| "coge 0 xs           = []"
+| "coge (Suc n) (x#xs) = x # (coge n xs)"
 
 value "coge 2 [a,c,d,b,e]" -- "= [a,c]"
 
@@ -90,7 +98,9 @@ text {* ---------------------------------------------------------------
   ------------------------------------------------------------------ *}
 
 fun elimina :: "nat \<Rightarrow> 'a list \<Rightarrow> 'a list" where
-  "elimina n xs = undefined"
+  "elimina n []           = []"
+| "elimina 0 xs           = xs"
+| "elimina (Suc n) (x#xs) = elimina n xs"
 
 value "elimina 2 [a,c,d,b,e]" -- "= [d,b,e]"
 
@@ -103,7 +113,8 @@ text {* ---------------------------------------------------------------
   ------------------------------------------------------------------ *}
 
 fun esVacia :: "'a list \<Rightarrow> bool" where
-  "esVacia xs = undefined"
+  "esVacia []     = True"
+| "esVacia (x#xs) = False"
 
 value "esVacia []"  -- "= True"
 value "esVacia [1]" -- "= False"
@@ -117,10 +128,11 @@ text {* ---------------------------------------------------------------
   ------------------------------------------------------------------ *}
 
 fun inversaAcAux :: "'a list \<Rightarrow> 'a list \<Rightarrow> 'a list" where
-  "inversaAcAux xs ys = undefined"
+  "inversaAcAux [] ys     = ys"
+| "inversaAcAux (x#xs) ys = inversaAcAux xs (x#ys)"
 
 fun inversaAc :: "'a list \<Rightarrow> 'a list" where
-  "inversaAc xs = undefined"
+  "inversaAc xs = inversaAcAux xs []"
 
 value "inversaAc [a,c,b,e]" -- "= [e,b,c,a]"
 
@@ -132,7 +144,8 @@ text {* ---------------------------------------------------------------
   ------------------------------------------------------------------ *}
 
 fun sum :: "nat list \<Rightarrow> nat" where
-  "sum xs = undefined"
+  "sum []     = 0"
+| "sum (x#xs) = x + sum xs"
 
 value "sum [3,2,5]" -- "= 10"
 
@@ -145,8 +158,10 @@ text {* ---------------------------------------------------------------
   ------------------------------------------------------------------ *}
 
 fun map :: "('a \<Rightarrow> 'b) \<Rightarrow> 'a list \<Rightarrow> 'b list" where
-  "map f xs = undefined"
+  "map f []     = []"
+| "map f (x#xs) = (f x) # map f xs"
 
 value "map (\<lambda>x. 2*x) [3::nat,2,5]" -- "= [6,4,10]"
 
 end
+```
