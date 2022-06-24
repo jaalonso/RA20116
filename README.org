@@ -1,5 +1,5 @@
 #+TITLE: RA20116
-
+ 
 Curso de [[http://www.glc.us.es/~jalonso/RA2016/index.php5/Razonamiento_autom%C3%A1tico_(2016-17)][Razonamiento automático" (2016-17)]]
 
 ** Temas
